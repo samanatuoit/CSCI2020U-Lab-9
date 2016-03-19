@@ -32,7 +32,7 @@ public class Main extends Application {
         root.getChildren().add(canvas);
 
         primaryStage.setTitle("Lab 9");
-        Scene scene = new Scene(root, 1000, 700);
+        Scene scene = new Scene(root, 1000, 950);
         primaryStage.setScene(scene);
         primaryStage.show();
 
@@ -105,14 +105,14 @@ public class Main extends Application {
 
         gc.setStroke(Color.BLACK);
         // y-axis line
-        gc.strokeLine(50,50,50,650);
+        gc.strokeLine(50,50,50,900);
         // x-axis line
-        gc.strokeLine(50,650,950,650);
+        gc.strokeLine(50,900,950,900);
 
-        gc.setStroke(Color.BLUE);
+        gc.setStroke(Color.RED);
         plotLine(stockOnePrices, gc);
-        //gc.setStroke(Color.RED);
-        //plotLine(stockTwoPrices, gc);
+        gc.setStroke(Color.BLUE);
+        plotLine(stockTwoPrices, gc);
 
     }
 
@@ -124,7 +124,7 @@ public class Main extends Application {
         double newPrice;
         double oldDate = baseX;
         double newDate = baseX;
-        //double chartPrice;
+
 
         for (int i = 1; i < stockPrices.size(); i++) {
             double price = stockPrices.get(i);
